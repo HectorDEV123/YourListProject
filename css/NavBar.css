@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.first-nav{
+  background-color: lawngreen;
+  padding: 15px;
+}
+
+.brand-name{
+  display: inline-block;
+}
+
+.brand-name > a{
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav{
+  display: inline-block;
+  width: calc(100% - 120px);
+  text-align: right;
+  vertical-align: middle;
+}
+
+.main-nav__item{
+  display: inline-block;
+}
+
+.main-nav__item > a{
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+
+.main-nav__item > a:hover{
+  color: white;
+  border-bottom: 1px solid white;
+}

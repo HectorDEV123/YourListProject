@@ -1,0 +1,53 @@
+
+.createPlaylistCont {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+
+.createPlaylistCont label {
+  margin: 5px 10px 5px 0;
+}
+
+
+.createPlaylistCont input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+
+.createPlaylistCont button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.createPlaylistCont button:hover {
+  background-color: royalblue;
+}
+
+.divider{
+  height: 20px;
+  width: 100%;
+  background-color: greenyellow;
+  border:  1px solid greenyellow;
+}
+
+#PlaylistCSS{
+  height: 200px;
+  width: 200px;
+  background-color: gray;
+  display: inline-block;
+  margin: 25px;
+
+}
+
+#PlaylistCSS img{
+  height: 100px;
+  margin-left: 70px;
+}
