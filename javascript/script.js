@@ -1,22 +1,19 @@
-// * Imports the DBINIT FILE TO USE
+// DOM Variables
 import { CheckDataBase } from "./LocalDb/DBINIT.js";
 
-// * DOM Variables
 const PlayListNameInput = document.getElementById("PlayListNameInput");
 const PlayListIconInput = document.getElementById("PlayListIconInput");
 const CreateBtn = document.getElementById("CreatePlayBtn");
 
-// * Each Playlist is Given an ID from 3-1, this variable gives it
 let PlayListID = 4;
 
-// ! Since Arrays cannot be passed in as its normal state the Playlist Data will be saved onto the "Non" Variables till conversion has happened
 
-let NonJSONPlayListArrayOne = [];
-let NonJSONPlayListArrayTwo = [];
-let NonJSONPlayListArrayThree = [];
+let PlayListArrayOne = [];
+let PlayListArrayTwo = [""];
+let PlayListArrayThree = [""];
 
-// ! These are the converted arrays name, once the data in NonJSON has been stringified it will be passed to this array before being processed to Local Database.
 
+<<<<<<< HEAD
 let StringJSONPlayListArrayOne;
 let StringJSONPlayListArrayTwo;
 let StringJSONPlayListArrayThree;
@@ -28,6 +25,12 @@ CheckDataBase();
 function OnCreateClick() {
   // ! This Function sets the maximum amount of Playlists to THREE!
  
+=======
+CheckDataBase();
+
+function OnCreateClick() {
+  // ! THIS FUNCTION DECREMENTS PLAYLIST ID TO MAKE SURE THE MAXIUMUM IS 3!
+>>>>>>> parent of c4ebd38 (Updated)
 
   switch (PlayListID) {
     case 4:
@@ -59,7 +62,7 @@ function CreatePlayList() {
   let TempIconValue = PlayListIconInput.value;
   let TempNameValue = PlayListNameInput.value;
 
-  // * The Constant Variables create the Playlist Container and its content.
+  // ! CONST VARIABLES CREATE ELEMENTS FOR DOM / PLAYLIST
 
   const NewPlayListContainer = document.createElement("div");
   const NewPlayListIcon = document.createElement("img");
@@ -67,7 +70,7 @@ function CreatePlayList() {
   const ViewPlaylistText = document.createElement("h6");
   const ViewPlayListLink = document.createElement("a");
 
-  // * Once Playlist Container has been made the code belows starts modifiying its Data.
+  // * MODIFIES PLAYLIST VALUES
 
   NewPlayListIcon.src = TempIconValue;
   NewPlayListName.innerHTML = TempNameValue;
@@ -75,7 +78,7 @@ function CreatePlayList() {
   ViewPlaylistText.innerHTML = "Click to View!";
   ViewPlayListLink.setAttribute("EventTarget", "_blank");
 
-  // * The Code Below Displays the PlayList to the Document Model
+  // * DISPLAYS TO DOM
 
   document.body.appendChild(NewPlayListContainer);
   NewPlayListContainer.appendChild(NewPlayListIcon);
@@ -89,11 +92,32 @@ function CreatePlayList() {
   switch (PlayListID) {
     case 3:
       NewPlayListContainer.className = "PlayListOne";
+<<<<<<< HEAD
       NonJSONPlayListArrayOne.push(TempIconValue);
       NonJSONPlayListArrayOne.push(TempNameValue);
       StringJSONPlayListArrayOne = JSON.stringify(NonJSONPlayListArrayOne);
       localStorage.setItem("PlayListOne", StringJSONPlayListArrayOne);
       ViewPlayListLink.href = "../html/PlayOne.html";
+=======
+      PlayListArrayOne.push(TempIconValue);
+      PlayListArrayOne.push(TempNameValue);
+      localStorage.setItem("PlayArrayone", PlayListArrayOne);
+      // console.log(PlayListArrayOne);
+      break;
+
+    case 2:
+      NewPlayListContainer.className = "PlayListTwo";
+      PlayListArrayTwo.push(TempIconValue);
+      PlayListArrayTwo.push(TempNameValue);
+      localStorage.setItem("PlayArrayTwo", PlayListArrayOne);
+      break;
+
+    case 1:
+      NewPlayListContainer.className = "PlayListThree";
+      PlayListArrayThree.push(TempIconValue);
+      PlayListArrayThree.push(TempNameValue);
+      localStorage.setItem("PlayArrayThree", PlayListArrayThree);
+>>>>>>> parent of c4ebd38 (Updated)
       break;
 
     case 2:
@@ -132,10 +156,18 @@ function ClearInput() {
   if (DOMValue2.value != "") {
     DOMValue2.value = "";
   }
+
+  
+  
 }
 
+<<<<<<< HEAD
 // * This Exported the JSON String Arrays to move to Local Database Processing
 export { StringJSONPlayListArrayOne, StringJSONPlayListArrayTwo, StringJSONPlayListArrayThree };
+=======
+
+export { PlayListArrayOne, PlayListArrayTwo, PlayListArrayThree };
+>>>>>>> parent of c4ebd38 (Updated)
 
 CreateBtn.addEventListener("click", OnCreateClick); 
 
@@ -143,3 +175,4 @@ document.getElementById("str").onclick = function () {
   localStorage.clear();
   console.warn("Cleared!");
 };
+
