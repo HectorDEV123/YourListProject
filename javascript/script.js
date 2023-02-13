@@ -7,13 +7,13 @@ const CreateBtn = document.getElementById("CreatePlayBtn");
 
 let PlayListID = 4;
 
-
-let PlayListArrayOne = [];
-let PlayListArrayTwo = [""];
-let PlayListArrayThree = [""];
-
+let NonJSONPlayListArrayOne = [];
+let NonJSONPlayListArrayTwo = [""];
+let NonJSONPlayListArrayThree = [""];
 
 let StringJSONPlayListArrayOne;
+let StringJSONPlayListArrayTwo;
+let StringJSONPlayListArrayThree;
 
 // * The function below executes the Database checker to see if any Playlist exists before calling a decsion
 CheckDataBase();
@@ -67,6 +67,7 @@ function CreatePlayList() {
   ViewPlaylistText.innerHTML = "Click to View!";
   ViewPlayListLink.href = "../html/PlayOne.html";
   ViewPlayListLink.setAttribute("EventTarget", "_blank");
+  NewPlayListContainer.className = "Container"; 
 
   // * DISPLAYS TO DOM
 
@@ -83,14 +84,26 @@ function CreatePlayList() {
       NewPlayListContainer.className = "PlayListOne";
       NonJSONPlayListArrayOne.push(TempIconValue);
       NonJSONPlayListArrayOne.push(TempNameValue);
-      StringJSONPlayListArrayOne = JSON.stringify(StringJSONPlayListArrayOne);
+      StringJSONPlayListArrayOne = JSON.stringify(NonJSONPlayListArrayOne);
       localStorage.setItem("PlayListOne", StringJSONPlayListArrayOne);
-
       break;
-  }
 
-  
-  
+      case 2:
+        NewPlayListContainer.className = "PlayListTwo";
+        NonJSONPlayListArrayOne.push(TempIconValue);
+        NonJSONPlayListArrayOne.push(TempNameValue);
+        StringJSONPlayListArrayOne = JSON.stringify(NonJSONPlayListArrayOne);
+        localStorage.setItem("PlayListOne", StringJSONPlayListArrayOne);
+        break;
+
+        case 1:
+          NewPlayListContainer.className = "PlayListThree";
+          NonJSONPlayListArrayOne.push(TempIconValue);
+          NonJSONPlayListArrayOne.push(TempNameValue);
+          StringJSONPlayListArrayOne = JSON.stringify(NonJSONPlayListArrayOne);
+          localStorage.setItem("PlayListOne", StringJSONPlayListArrayOne);
+          break;
+  }
 }
 
 // * This Exported the JSON String Arrays to move to Local Database Processing
@@ -102,4 +115,3 @@ document.getElementById("str").onclick = function () {
   localStorage.clear();
   console.warn("Cleared!");
 };
-
