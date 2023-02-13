@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="../css/NavBar.css">
   <link rel="stylesheet" href="../css/PlayList.css">
   <link rel="shortcut icon" href="../images/favi.jpg" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,16 +25,20 @@
   </header>
 
   <div action="" class="createPlaylistCont">
-    <input  type="text" placeholder="Enter Playlist Name" name="" id="PlayListNameInput">
-    <input type="text" placeholder="Enter Playlist Icon" name="" id="PlayListIconInput">
-    <button id="str">Clear Storage</button>
-    <button value="clear" id="CreatePlayBtn">Create Playlist</button>
+    <input type="text" placeholder="Enter Song Icon" name="" id="PlayListSongIconInput">
+    <input type="text" placeholder="Enter Song Name" name="" id="PlayListSongNameInput">
+    <input type="text" placeholder="Enter Song Artist" name="" id="PlayListArtistInput">
+    <input type="text" placeholder="Enter Song URl" name="" id="PlayListURLInput">
+
+    <button id="AddSong">Create Playlist</button>
   </div>
 
   <div class="divider"></div>
 
 
-  <script type="module" src="../javascript/script.js"></script>
+  <script src="../javascript/PlayOne.js"></script>
+
+
 </body>
 
 </html>
