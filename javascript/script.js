@@ -15,10 +15,17 @@ let StringJSONPlayListArrayOne;
 let StringJSONPlayListArrayTwo;
 let StringJSONPlayListArrayThree;
 
+let x = 4;
 // * The function below executes the Database checker to see if any Playlist exists before calling a decsion
 CheckDataBase();
 
-function OnCreateClick() {
+let test = function Test(){
+  console.log("Test");
+  return "This is a Test"
+}
+console.log(test)
+
+function OnCreateClick(param) {
   // ! This Function sets the maximum amount of Playlists to THREE!
 
   switch (PlayListID) {
