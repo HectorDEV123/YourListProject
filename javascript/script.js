@@ -13,7 +13,6 @@ let PlayListArrayTwo = [""];
 let PlayListArrayThree = [""];
 
 
-<<<<<<< HEAD
 let StringJSONPlayListArrayOne;
 let StringJSONPlayListArrayTwo;
 let StringJSONPlayListArrayThree;
@@ -25,12 +24,6 @@ CheckDataBase();
 function OnCreateClick() {
   // ! This Function sets the maximum amount of Playlists to THREE!
  
-=======
-CheckDataBase();
-
-function OnCreateClick() {
-  // ! THIS FUNCTION DECREMENTS PLAYLIST ID TO MAKE SURE THE MAXIUMUM IS 3!
->>>>>>> parent of c4ebd38 (Updated)
 
   switch (PlayListID) {
     case 4:
@@ -92,32 +85,11 @@ function CreatePlayList() {
   switch (PlayListID) {
     case 3:
       NewPlayListContainer.className = "PlayListOne";
-<<<<<<< HEAD
       NonJSONPlayListArrayOne.push(TempIconValue);
       NonJSONPlayListArrayOne.push(TempNameValue);
       StringJSONPlayListArrayOne = JSON.stringify(NonJSONPlayListArrayOne);
       localStorage.setItem("PlayListOne", StringJSONPlayListArrayOne);
       ViewPlayListLink.href = "../html/PlayOne.html";
-=======
-      PlayListArrayOne.push(TempIconValue);
-      PlayListArrayOne.push(TempNameValue);
-      localStorage.setItem("PlayArrayone", PlayListArrayOne);
-      // console.log(PlayListArrayOne);
-      break;
-
-    case 2:
-      NewPlayListContainer.className = "PlayListTwo";
-      PlayListArrayTwo.push(TempIconValue);
-      PlayListArrayTwo.push(TempNameValue);
-      localStorage.setItem("PlayArrayTwo", PlayListArrayOne);
-      break;
-
-    case 1:
-      NewPlayListContainer.className = "PlayListThree";
-      PlayListArrayThree.push(TempIconValue);
-      PlayListArrayThree.push(TempNameValue);
-      localStorage.setItem("PlayArrayThree", PlayListArrayThree);
->>>>>>> parent of c4ebd38 (Updated)
       break;
 
     case 2:
@@ -161,13 +133,8 @@ function ClearInput() {
   
 }
 
-<<<<<<< HEAD
 // * This Exported the JSON String Arrays to move to Local Database Processing
 export { StringJSONPlayListArrayOne, StringJSONPlayListArrayTwo, StringJSONPlayListArrayThree };
-=======
-
-export { PlayListArrayOne, PlayListArrayTwo, PlayListArrayThree };
->>>>>>> parent of c4ebd38 (Updated)
 
 CreateBtn.addEventListener("click", OnCreateClick); 
 
