@@ -1,16 +1,9 @@
-@@ -1,53 +1,107 @@
-
-.createPlaylistCont {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
 .createPlaylistCont label {
   margin: 5px 10px 5px 0;
+  box-sizing: border-box;
 }
-
 
 .createPlaylistCont input {
   vertical-align: middle;
@@ -19,7 +12,6 @@
   background-color: #fff;
   border: 1px solid #ddd;
 }
-
 
 .createPlaylistCont button {
   padding: 10px 20px;
@@ -32,14 +24,14 @@
   background-color: royalblue;
 }
 
-.divider{
+.divider {
   height: 20px;
-  width: 100%;
+
   background-color: greenyellow;
-  border:  1px solid greenyellow;
+  border: 1px solid greenyellow;
 }
 
-#PlaylistCSS{
+#PlaylistCSS {
   height: 200px;
   width: 200px;
   background-color: gray;
@@ -53,10 +45,10 @@
   color: white;
   text-align: center;
   font-size: 20px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
 }
 
-#PlaylistCSS img{
+#PlaylistCSS img {
   height: 100px;
   height: 175px;
   margin-left: 70px;
@@ -64,41 +56,41 @@
   border-radius: 5px;
 }
 
-#PlaylistCSS > a{
+#PlaylistCSS > a {
   color: white;
   text-decoration: none;
 }
 
-#PlaylistCSS > a:hover{
+#PlaylistCSS > a:hover {
   color: yellow;
 }
 
-#PlaylistCSS > h5{
+#PlaylistCSS > h5 {
   padding-bottom: 15px;
 }
 
-p{
+p {
   display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 13px;
   padding-left: 10px;
 }
 
-.songIcon{
+.songIcon {
   vertical-align: middle;
 }
 
-.Container > img{
+.Container > img {
   height: 175px;
   width: 175px;
   background-color: black;
 }
 
-.SongName{
+.SongName {
   padding-left: 20%;
 }
 
-.ArtistName{
+.ArtistName {
   display: inline-block;
   padding-left: 20%;
   vertical-align: middle;
@@ -108,6 +100,36 @@ p{
   display: flex;
   align-items: center;
   margin: 30px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.createPlaylistCont input {
+  margin: 20px;
+}
+
+button {
+  margin: 10px;
+}
+
+html{
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.player {
+  background-color: #FFCF79;
+  height: 100%;
+  width: 350px;
+  margin-left: auto;
+  padding: 25px;
   
 }
+
+iframe{
+
+  
+}
+

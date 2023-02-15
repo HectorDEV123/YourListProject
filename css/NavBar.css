@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+
 *{
   padding: 0;
   margin: 0;
@@ -6,6 +9,7 @@
 .first-nav{
   background-color: lawngreen;
   padding: 15px;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .brand-name{
@@ -19,7 +23,7 @@
 
 .main-nav{
   display: inline-block;
-  width: calc(100% - 120px);
+  width: calc(100% - 180px);
   text-align: right;
   vertical-align: middle;
 }
